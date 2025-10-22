@@ -7,11 +7,17 @@
 #
 # All rights reserved.
 
+import asyncio as _asyncio
+
+import uvloop as _uvloop
+
+_asyncio.set_event_loop_policy(_uvloop.EventLoopPolicy())  # noqa
+
 from DnsXMusic.core.bot import DnsBot
 from DnsXMusic.core.dir import dirr
 from DnsXMusic.core.git import git
 from DnsXMusic.core.userbot import Userbot
-from DnsXMusic.misc import dbb, heroku, sudo
+from DnsXMusic.misc import dbb, heroku
 
 from .logging import LOGGER
 
@@ -27,21 +33,7 @@ dbb()
 # Heroku APP
 heroku()
 
-# Load Sudo Users from DB
-sudo()
-# Bot Client
 app = DnsBot()
-
-# Assistant Client
 userbot = Userbot()
 
-from .platforms import *
-
-YouTube = YouTubeAPI()
-Carbon = CarbonAPI()
-Spotify = SpotifyAPI()
-Apple = AppleAPI()
-Resso = RessoAPI()
-SoundCloud = SoundAPI()
-Telegram = TeleAPI()
 HELPABLE = {}
