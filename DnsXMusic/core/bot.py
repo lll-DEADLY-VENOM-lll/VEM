@@ -35,7 +35,7 @@ class DnsBot(Client):
         LOGGER(__name__).info("Starting Bot...")
 
         super().__init__(
-            "YukkiMusic",
+            "DnsXMusic",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             bot_token=config.BOT_TOKEN,
