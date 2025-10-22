@@ -29,5 +29,6 @@ gunicorn
 yt-dlp
 youtube-search-python
 youtube_search
-git+https://github.com/KurimuzonAkuma/pyrogram@dev
-#git+https://github.com/Vivekkumar-IN/yt-dlp-youtube-oauth2
+yt-dlp-youtube-oauth2
+git+https://github.com/KurimuzonAkuma/pyrogram/archive/v2.1.23.zip
+
